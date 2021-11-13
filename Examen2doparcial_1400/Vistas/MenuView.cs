@@ -42,6 +42,9 @@ namespace Examen2doparcial_1400.Vistas
         private void Vista_FormClosed(object sender, FormClosedEventArgs e)
         {
             vistaTipos = null;
+            vistaDetalle = null;
+            vistaEstados = null;
+            vistaTicket = null;
         }
 
         private void EstadosToolStripButton_Click(object sender, EventArgs e)

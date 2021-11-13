@@ -51,9 +51,9 @@ namespace Examen2doparcial_1400.Vistas
             | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
             this.TiposDataGridView.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.TiposDataGridView.Location = new System.Drawing.Point(0, 259);
+            this.TiposDataGridView.Location = new System.Drawing.Point(0, 245);
             this.TiposDataGridView.Name = "TiposDataGridView";
-            this.TiposDataGridView.Size = new System.Drawing.Size(620, 128);
+            this.TiposDataGridView.Size = new System.Drawing.Size(620, 131);
             this.TiposDataGridView.TabIndex = 0;
             // 
             // label1
@@ -150,7 +150,7 @@ namespace Examen2doparcial_1400.Vistas
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(622, 385);
+            this.ClientSize = new System.Drawing.Size(622, 374);
             this.Controls.Add(this.CancelarButton);
             this.Controls.Add(this.EliminarButton);
             this.Controls.Add(this.GuardarButton);

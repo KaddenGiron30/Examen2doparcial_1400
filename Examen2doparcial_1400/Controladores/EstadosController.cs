@@ -44,7 +44,7 @@ namespace Examen2doparcial_1400.Controladores
 
             if (operacion == "Nuevo")
             {
-                bool inserto = EstadosDAO.InsertarNuevoTipo(user);
+                bool inserto = EstadosDAO.InsertarNuevoEstado(user);
 
                 if (inserto)
                 {
@@ -61,7 +61,7 @@ namespace Examen2doparcial_1400.Controladores
             else if (operacion == "Modificar")
             {
                 user.Id = Convert.ToInt32(vista.IdTextBox.Text);
-                bool modifico = EstadosDAO.ActualizarUsuario(user);
+                bool modifico = EstadosDAO.ActualizarEstado(user);
 
                 if (modifico)
                 {
@@ -79,7 +79,7 @@ namespace Examen2doparcial_1400.Controladores
 
         private void Eliminar(object serder, EventArgs e)
         {
-            bool elimino = EstadosDAO.EliminarUsuario(Convert.ToInt32(vista.EstadosDataGridView.CurrentRow.Cells[0].Value.ToString()));
+            bool elimino = EstadosDAO.EliminarEstado(Convert.ToInt32(vista.EstadosDataGridView.CurrentRow.Cells[0].Value.ToString()));
 
             if (elimino)
             {
@@ -98,9 +98,10 @@ namespace Examen2doparcial_1400.Controladores
             if (vista.EstadosDataGridView.SelectedRows.Count > 0)
             {
                 vista.IdTextBox.Text = vista.EstadosDataGridView.CurrentRow.Cells["ID"].Value.ToString();
-               //vista.SoporteTextBox.Text = vista.TiposDataGridView.CurrentRow.Cells["SOPORTE"].Value.ToString();
-
-
+               vista.ResolverCheckBox.Text = vista.EstadosDataGridView.CurrentRow.Cells["SIN_RESOLVER"].Value.ToString();
+                vista.EsperaCheckBox.Text = vista.EstadosDataGridView.CurrentRow.Cells["EN_ESPERA"].Value.ToString();
+                vista.AbiertoCheckBox.Text = vista.EstadosDataGridView.CurrentRow.Cells["ABIERTO"].Value.ToString();
+                vista.CerradoCheckBox.Text = vista.EstadosDataGridView.CurrentRow.Cells["CERRADO"].Value.ToString();
                 HabilitarControles();
 
             }
@@ -127,7 +128,7 @@ namespace Examen2doparcial_1400.Controladores
 
         private void ListarUsuarios()
         {
-            vista.EstadosDataGridView.DataSource = EstadosDAO.GetUsuarios();
+            vista.EstadosDataGridView.DataSource = EstadosDAO.GetEstado();
         }
         private void LimpiarControles()
         {

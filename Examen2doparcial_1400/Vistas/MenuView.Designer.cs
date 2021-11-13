@@ -82,7 +82,7 @@ namespace Examen2doparcial_1400.Vistas
             this.ribbonControlAdv1.QuickPanelVisible = false;
             this.ribbonControlAdv1.RibbonHeaderImage = Syncfusion.Windows.Forms.Tools.RibbonHeaderImage.None;
             this.ribbonControlAdv1.RibbonStyle = Syncfusion.Windows.Forms.Tools.RibbonStyle.Office2016;
-            this.ribbonControlAdv1.SelectedTab = this.ToolStripTab2;
+            this.ribbonControlAdv1.SelectedTab = this.ToolStripTab;
             this.ribbonControlAdv1.ShowRibbonDisplayOptionButton = true;
             this.ribbonControlAdv1.Size = new System.Drawing.Size(872, 144);
             this.ribbonControlAdv1.SystemText.QuickAccessDialogDropDownName = "Start menu";

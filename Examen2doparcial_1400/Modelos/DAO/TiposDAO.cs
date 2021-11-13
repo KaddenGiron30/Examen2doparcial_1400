@@ -40,7 +40,7 @@ namespace Examen2doparcial_1400.Modelos.DAO
             return inserto;
         }
 
-        public DataTable GetUsuarios()
+        public DataTable GetTipos()
         {
             DataTable dt = new DataTable();
             try
@@ -63,7 +63,7 @@ namespace Examen2doparcial_1400.Modelos.DAO
             return dt;
         }
 
-        public bool ActualizarUsuario(Tipos user)
+        public bool ActualizarTipos(Tipos user)
         {
             bool modifico = false;
             try
@@ -92,7 +92,7 @@ namespace Examen2doparcial_1400.Modelos.DAO
             }
             return modifico;
         }
-        public bool EliminarUsuario(int id)
+        public bool EliminarTipos(int id)
         {
             bool modifico = false;
             try

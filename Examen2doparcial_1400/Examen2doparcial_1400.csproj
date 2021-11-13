@@ -50,14 +50,20 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="Controladores\DetalleController.cs" />
     <Compile Include="Controladores\EstadosController.cs" />
     <Compile Include="Controladores\LoginController.cs" />
+    <Compile Include="Controladores\TicketController.cs" />
     <Compile Include="Controladores\TiposController.cs" />
     <Compile Include="Modelos\DAO\Conexion.cs" />
+    <Compile Include="Modelos\DAO\DetalleDAO.cs" />
     <Compile Include="Modelos\DAO\EstadosDAO.cs" />
+    <Compile Include="Modelos\DAO\TicketDAO.cs" />
     <Compile Include="Modelos\DAO\TiposDAO.cs" />
     <Compile Include="Modelos\DAO\UsuarioDAO.cs" />
+    <Compile Include="Modelos\Entidades\Detalles.cs" />
     <Compile Include="Modelos\Entidades\Estados.cs" />
+    <Compile Include="Modelos\Entidades\Ticket.cs" />
     <Compile Include="Modelos\Entidades\Tipos.cs" />
     <Compile Include="Modelos\Entidades\Usuario.cs" />
     <Compile Include="Program.cs" />
@@ -108,6 +114,9 @@
       <DependentUpon>Resources.resx</DependentUpon>
       <DesignTime>True</DesignTime>
     </Compile>
+    <EmbeddedResource Include="Vistas\DetallesView.resx">
+      <DependentUpon>DetallesView.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="Vistas\EstadosView.resx">
       <DependentUpon>EstadosView.cs</DependentUpon>
     </EmbeddedResource>
@@ -116,6 +125,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Vistas\MenuView.resx">
       <DependentUpon>MenuView.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Vistas\TicketsView.resx">
+      <DependentUpon>TicketsView.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Vistas\TiposView.resx">
       <DependentUpon>TiposView.cs</DependentUpon>

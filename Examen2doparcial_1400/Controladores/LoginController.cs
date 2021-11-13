@@ -20,6 +20,17 @@ namespace Examen2doparcial_1400.Controladores
             vista = view;
 
             vista.AceptarButton.Click += new EventHandler(ValidarUsuario);
+            vista.CancelarButton.Click += new EventHandler(Cancelar);
+        }
+
+        private void Cancelar(object sender, EventArgs e)
+        {
+            LimpiarControles();
+        }
+        private void LimpiarControles()
+        {
+            vista.EmailTextBox.Clear();
+            vista.ContrasenaTextBox.Clear();
         }
 
         private void ValidarUsuario(object serder, EventArgs e)
@@ -59,5 +70,6 @@ namespace Examen2doparcial_1400.Controladores
             for (int i = 0; i < streams.Length; i++) sb.AppendFormat("{0:x2}", streams[i]);
             return sb.ToString();
         }
+
     }
 }

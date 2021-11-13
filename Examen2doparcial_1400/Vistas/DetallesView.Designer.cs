@@ -29,12 +29,36 @@ namespace Examen2doparcial_1400.Vistas
         /// </summary>
         private void InitializeComponent()
         {
-            this.components = new System.ComponentModel.Container();
+            this.DetalleDataGridView = new System.Windows.Forms.DataGridView();
+            ((System.ComponentModel.ISupportInitialize)(this.DetalleDataGridView)).BeginInit();
+            this.SuspendLayout();
+            // 
+            // DetalleDataGridView
+            // 
+            this.DetalleDataGridView.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
+            this.DetalleDataGridView.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.DetalleDataGridView.Location = new System.Drawing.Point(3, 2);
+            this.DetalleDataGridView.Name = "DetalleDataGridView";
+            this.DetalleDataGridView.Size = new System.Drawing.Size(653, 414);
+            this.DetalleDataGridView.TabIndex = 0;
+            // 
+            // DetallesView
+            // 
+            this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(800, 450);
-            this.Text = "DetallesView";
+            this.ClientSize = new System.Drawing.Size(658, 417);
+            this.Controls.Add(this.DetalleDataGridView);
+            this.Name = "DetallesView";
+            this.Text = "Detalles";
+            ((System.ComponentModel.ISupportInitialize)(this.DetalleDataGridView)).EndInit();
+            this.ResumeLayout(false);
+
         }
 
         #endregion
+
+        public System.Windows.Forms.DataGridView DetalleDataGridView;
     }
 }

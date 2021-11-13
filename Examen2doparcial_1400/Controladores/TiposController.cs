@@ -25,12 +25,19 @@ namespace Examen2doparcial_1400.Controladores
             vista.GuardarButton.Click += new EventHandler(Guardar);
             vista.ModificarButton.Click += new EventHandler(Modificar);
             vista.EliminarButton.Click += new EventHandler(Eliminar);
+            vista.CancelarButton.Click += new EventHandler(Cancelar);
             vista.Load += new EventHandler(Load);
+        }
+
+        private void Cancelar(object sender, EventArgs e)
+        {
+            DesabilitarControles();
+            LimpiarControles();
         }
 
         private void Eliminar (object serder, EventArgs e)
         {
-            bool elimino = tipoDAO.EliminarUsuario(Convert.ToInt32(vista.TiposDataGridView.CurrentRow.Cells[0].Value.ToString()));
+            bool elimino = tipoDAO.EliminarTipos(Convert.ToInt32(vista.TiposDataGridView.CurrentRow.Cells[0].Value.ToString()));
 
             if (elimino)
             {
@@ -100,7 +107,7 @@ namespace Examen2doparcial_1400.Controladores
             else if (operacion == "Modificar")
             {
                 user.Id = Convert.ToInt32(vista.IdTextBox.Text);
-                bool modifico = tipoDAO.ActualizarUsuario(user);
+                bool modifico = tipoDAO.ActualizarTipos(user);
 
                 if (modifico)
                 {
@@ -118,7 +125,7 @@ namespace Examen2doparcial_1400.Controladores
 
         private void ListarUsuarios()
         {
-            vista.TiposDataGridView.DataSource = tipoDAO.GetUsuarios();
+            vista.TiposDataGridView.DataSource = tipoDAO.GetTipos();
         }
 
         private void LimpiarControles()

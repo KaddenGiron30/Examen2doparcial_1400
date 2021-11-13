@@ -13,13 +13,13 @@ namespace Examen2doparcial_1400.Modelos.DAO
     {
         SqlCommand comando = new SqlCommand();
 
-        public bool InsertarNuevoTipo(Estados user)
+        public bool InsertarNuevoEstado(Estados user)
         {
             bool inserto = false;
             try
             {
                 StringBuilder sql = new StringBuilder();
-                sql.Append(" INSERT INTO ESTADOS1 ");
+               sql.Append(" INSERT INTO ESTADOS1");
                 sql.Append(" VALUES (@SinResolver,@EnEspera, @Abierto, @Cerrado); ");
 
                 comando.Connection = MiConexion;
@@ -43,13 +43,13 @@ namespace Examen2doparcial_1400.Modelos.DAO
             return inserto;
         }
 
-        public DataTable GetUsuarios()
+        public DataTable GetEstado()
         {
             DataTable dt = new DataTable();
             try
             {
                 StringBuilder sql = new StringBuilder();
-                sql.Append(" SELECT * FROM ESTADOS1 ");
+                sql.Append(" SELECT * FROM ESTADOS1");
 
                 comando.Connection = MiConexion;
                 MiConexion.Open();
@@ -66,14 +66,14 @@ namespace Examen2doparcial_1400.Modelos.DAO
             return dt;
         }
 
-        public bool ActualizarUsuario(Estados user)
+        public bool ActualizarEstado(Estados user)
         {
             bool modifico = false;
             try
             {
                 StringBuilder sql = new StringBuilder();
                 sql.Append(" UPDATE ESTADOS1 ");
-                sql.Append(" SET SOPORTE = @SinResolver, @Abierto, @Cerrado");
+                sql.Append(" SET SIN_RESOLVER = @SinResolver, EN_ESPERA = @EnEspera , ABIERTO = @Abierto, CERRADO = @Cerrado");
                 sql.Append(" WHERE ID = @Id; ");
 
                 comando.Connection = MiConexion;
@@ -90,7 +90,6 @@ namespace Examen2doparcial_1400.Modelos.DAO
                 modifico = true;
                 MiConexion.Close();
 
-
             }
             catch (Exception)
             {
@@ -99,13 +98,14 @@ namespace Examen2doparcial_1400.Modelos.DAO
             return modifico;
         }
 
-        public bool EliminarUsuario(int id)
+        public bool EliminarEstado(int id)
         {
             bool modifico = false;
             try
             {
                 StringBuilder sql = new StringBuilder();
                 sql.Append(" DELETE FROM ESTADOS1 ");
+                
                 sql.Append(" WHERE ID = @Id; ");
 
                 comando.Connection = MiConexion;
@@ -117,7 +117,6 @@ namespace Examen2doparcial_1400.Modelos.DAO
                 comando.ExecuteNonQuery();
                 modifico = true;
                 MiConexion.Close();
-
             }
             catch (Exception)
             {
